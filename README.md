@@ -2,7 +2,7 @@
 
 Open a terminal and type
 ```
-Git clone `https://github.com/shockstate/choice-upc.git
+Git clone https://github.com/shockstate/choice-upc.git
 ```
 1. Install [node.js](https://nodejs.org/en/). Version 14 or 16 it's what I recommend but all should work.
 1. Execute `node --version` in console to see if it was succesfull.
