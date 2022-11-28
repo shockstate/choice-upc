@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ExampleComponent from './components/ExampleComponent';
+import ComponentWithStateVariable from './components/ComponentWithStateVariable';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         >
           Learn React
         </a>
+        <ExampleComponent textToShow='hola Nora :)'></ExampleComponent>
+        <ComponentWithStateVariable />
       </header>
     </div>
   );

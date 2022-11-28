@@ -1,8 +1,16 @@
-# Getting Started with Create React App
+# First steps
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Open a terminal and type
+```
+Git clone `https://github.com/shockstate/choice-upc.git
+```
+1. Install [node.js](https://nodejs.org/en/). Version 14 or 16 it's what I recommend but all should work.
+1. Execute `node --version` in console to see if it was succesfull.
+1. Execute `npm install --global yarn`
+1. Execute `yarn --version` in console to see if it was succesfull.
+1. Then, inside the folder `choice-upc` you can execute `yarn` to get all the packages needed.
 
-## Available Scripts
+# How to run the app
 
 In the project directory, you can run:
 
@@ -14,32 +22,31 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+Download [VSCode](https://code.visualstudio.com/) to make your life easy during development. Once open, if you go to the `Extensions` tab you can install `ESLint` and `Prettier` which will help you to make your code look good. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Project structure
 
-### `yarn build`
+You will find that `index.tsx` is the base of your application. You can find there that a component `<App />` is being rendered. This means that your app will consist only in what you have inside the app component.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A component is defined in a tsx file and it's a funcion that have a return method with some html inside it.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Usually its good to keep components small so you can reuse them. A component can have inside multiple components.
+You can see an example of how to create a component inside a component and pass information from the parent to it in the `ExampleComponent.tsx`, which it's used in `App.tsx`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A typical SPA will be very dynamically. So when you click on buttons, or checkboxes, or select options, the page will display different information. In order to do that we use `useState` from react.
+When creating a state variable, you will define the variable, and a set method (that we will use to change it's value).
+Every time the set method is called, the information in the screen will be automatically updated (without the need to refresh).\
+You pass as well the initial value when you define this variables. You can find an example in `ComponentWithStateVariable.tsx`.
+There are other useful "hooks" like `useEffect`, which will execute code when the value of the variable you define changes.
+In the `ComponentWithStateVariable.tsx` you can see that every time that the text changes, a message is send to the console. In order to see the console messages (very useful when things don't work as expected, Press F12 when you are in the browser and go to the tab `Console`).
 
-### `yarn eject`
+In order to make your app look good you can use CSS (`App.tsx` has an example using `App.css`) or you can use a framework that makes life easy for you (Bootstrap). You can check the documentation in the official page. I personally use [Material UI](https://mui.com/) but maybe we can talk about that later.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<b>Have fun!!! And don't hesitate on contacting me, especially at the beginning, because simple things could make you waste a lot of time but asking will make you learn faster and obviously much less frustrating.</B>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you want we can collaborate together. Tell me and I can explain git basics so I can see your progress and drop some tips ;)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
+# Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
